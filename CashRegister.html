@@ -1,23 +1,33 @@
 <html>
     <head>
 	<title>MCFS - Cash Register</title>
+	<link rel="stylesheet" type="text/css" href="CashRegister.css">
     </head>
     <body>
 	<div id="Container">
 	    <div id="Form">
-		<form>
-		    <label for="location">Location :</label>
-		    <select id="location">
-			<option value="Option1">Option1</option>
-			<option value="Option2">Option2</option>
-			<option value="Option3">Option3</option>
-		    </select>
-		    <label for="payment">Payment :</label>
-		    <input type="radio" name="payment" value="mealPlan">Meal Plan</input>
-		    <input type="radio" name="payment" value="diningDollars">Dining Dollars</input>
-		    <input type="radio" name="payment" value="cash_credit">Cash/Credit</input>
-		    <input type="radio" name="payment" value="combination">Combination</input>
-
+		<form method="post" action="http://symlink.dk/code/php/submit/" id="RegisterForm">
+			<ul>
+				<li>
+					<label for="location">Location :</label>
+					<select name="Location" form="RegisterForm">
+						<option value="Towers">Towers</option>
+						<option value="Summit">Summit</option>
+						<option value="Stalnaker">Stalnaker</option>
+						<option value="BurgerKing">BurgerKing</option>
+						<option value="ChikFilA">Chik-Fil-A</option>
+						<option value="Sbarros">Sbarros</option>
+					</select>
+				</li>
+				<li><label for="PaymentType">Payment :</label>
+					<ul>
+						<li><input type="radio" name="payment" value="mealPlan">Meal Plan</input></li>
+						<li><input type="radio" name="payment" value="diningDollars">Dining Dollars</input></li>
+						<li><input type="radio" name="payment" value="cash_credit">Cash/Credit</input></li>
+						<li><input type="radio" name="payment" value="combination">Combination</input></li>
+					</ul>
+				</li>
+			</ul>
 		    <input type="submit" value="Submit" />
 		</form>
 	    </div>	
